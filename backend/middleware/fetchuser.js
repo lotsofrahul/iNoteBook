@@ -4,7 +4,7 @@ const JWT_SECRET = "hellothisisssssh";
 const fetchuser = (req, res, next) => {
   // Get the token from the header
   const token = req.header("auth-token");
-
+  
   // Check if token doesn't exist
   if (!token) {
     return res.status(401).json({ error: "Access Denied! Please login." });
