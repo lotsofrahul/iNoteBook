@@ -27,7 +27,7 @@ import { useState } from "react";
 // };
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000";
+  const host = "http://localhost:4000";
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
 
@@ -48,7 +48,7 @@ const NoteState = (props) => {
 
   const addNote = async (title, description, tag) => {
     // API Call
-    const response = await fetch("http://localhost:5000/api/notes/addnote", {
+    const response = await fetch("http://localhost:4000/api/notes/addnote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
